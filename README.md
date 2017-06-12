@@ -13,10 +13,13 @@ Along with an OCaml compiler, this program depends on the following libraries :
 
 - `menhir`, the parser generator that we use to convert PDF grammar into OCaml code ;
 - `ounit`, to manage unit tests ;
-- `cryptokit`, to handle the decoding of [Deflate](http://www.ietf.org/rfc/rfc1951.txt) streams in PDF files.
+- `cryptokit`, to handle the decoding of [Deflate](http://www.ietf.org/rfc/rfc1951.txt) streams in PDF files ;
+- `curses`, for the console UI.
+
+Additionally, CryptoKit relies on the `zlib1g-dev` and `libgmp-dev` Debian packages, and OCaml may require `pkg-config` and `m4` as well.
 
 The prefered way to install dependencies is via [opam](https://opam.ocaml.org/), the OCaml package manager.
-The following commands give an example of installation.
+You can use the following commands.
 ```
 apt-get install ocaml opam
 apt-get install zlib1g-dev libgmp-dev pkg-config m4
